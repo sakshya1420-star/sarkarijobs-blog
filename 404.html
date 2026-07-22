@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Instantly redirects any broken/old links to the homepage -->
+    <meta http-equiv="refresh" content="0; url=/">
+    <title>Redirecting to SarkariJobs...</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .message {
+            text-align: center;
+        }
+        .loader {
+            border: 4px solid #e2e8f0;
+            border-top: 4px solid #2563eb;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <div class="loader"></div>
+        <h2>Redirecting to the latest jobs...</h2>
+        <p>If you are not redirected automatically, <a href="/" style="color: #2563eb;">click here</a>.</p>
+    </div>
+</body>
+</html>

@@ -1,242 +1,308 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkari Jobs Blog | Latest Govt Jobs &amp; Results</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <title>Sarkari Jobs Blog | Latest Govt Jobs & Results</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // blue-500
+                        secondary: '#ef4444', // red-500
+                        darkbg: '#0f172a', // slate-900
+                        cardbg: '#1e293b', // slate-800
+                        bordercolor: '#334155' // slate-700
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Existing style.css for fallback or custom tweaks -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-img {
+            transition: transform 0.5s ease;
+        }
+        .hero-card:hover .hero-img {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-text">SarkariJobs<span class="dot">.</span>blog</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Latest Jobs</a></li>
-                <li><a href="#">Admit Card</a></li>
-                <li><a href="#">Results</a></li>
-                <li><a href="#">Syllabus</a></li>
-            </ul>
-            <button class="menu-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
-            </button>
-        </div>
-    </nav>
+<body class="bg-darkbg text-gray-200 antialiased">
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Find Your Dream Government Job Today</h1>
-            <p>The fastest, most reliable portal for all latest Sarkari exams, results, and admit cards.</p>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for jobs, exams, results...">
-                <button type="submit">Search</button>
-            </div>
-        </div>
-        <div class="marquee-container">
-            <div class="marquee">
-                <span class="new-badge">NEW</span> SSC CGL 2026 Notification Out &nbsp;|&nbsp; 
-                <span class="new-badge">NEW</span> RRB NTPC Admit Card Download &nbsp;|&nbsp; 
-                <span class="new-badge">NEW</span> UPSC CSE Prelims Result Announced
+    <!-- Sticky Glassmorphism Header -->
+    <header class="glass-header sticky top-0 z-50 border-b border-bordercolor transition-transform duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="text-2xl font-extrabold text-white tracking-tight">
+                        SarkariJobs<span class="text-primary">.</span>blog
+                    </a>
+                </div>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/" class="text-white font-semibold hover:text-primary transition-colors px-3 py-2 text-sm uppercase tracking-wider border-b-2 border-primary">News</a>
+                    <a href="/latest-jobs.html" class="text-gray-300 hover:text-white transition-colors px-3 py-2 text-sm uppercase tracking-wider">Latest Jobs</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors px-3 py-2 text-sm uppercase tracking-wider">Admit Card</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors px-3 py-2 text-sm uppercase tracking-wider">Results</a>
+                </nav>
+                <!-- Search & Actions -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-300 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hot Trending Exams -->
-    <section class="hot-exams">
-        <div class="hot-container">
-            <a href="#" class="hot-box">SSC CGL 2026<br><span>Apply Now</span></a>
-            <a href="#" class="hot-box">RRB NTPC<br><span>Admit Card</span></a>
-            <a href="#" class="hot-box">UP Police<br><span>Result Declared</span></a>
-            <a href="#" class="hot-box">UPSC CSE<br><span>Pre Result</span></a>
-            <a href="#" class="hot-box">CTET July<br><span>Answer Key</span></a>
-            <a href="#" class="hot-box">IBPS PO<br><span>Apply Online</span></a>
-        </div>
-    </section>
-
-    <!-- Main Grid Section -->
-    <main class="main-container">
-        <!-- Results Column -->
-        <section class="card-column">
-            <div class="card-header results-header">
-                <h2>Results</h2>
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Trending Banner -->
+        <div class="bg-cardbg border border-bordercolor rounded-lg p-3 mb-8 flex items-center space-x-4 overflow-hidden">
+            <span class="bg-secondary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider shrink-0">Trending</span>
+            <div class="text-sm font-medium whitespace-nowrap overflow-x-auto no-scrollbar flex space-x-6 text-gray-300">
+                <a href="#" class="hover:text-primary">SSC CGL 2026 Notification Out</a>
+                <a href="#" class="hover:text-primary">RRB NTPC Admit Card Download</a>
+                <a href="#" class="hover:text-primary">UPSC CSE Prelims Result Announced</a>
             </div>
-            <ul class="job-list"><li><a href="/jobs/www.sarkariresult.com.html">SARKARl RESULT®</a> <span class="badge red">Hot</span></li><li><a href="/jobs/result.html">Results</a></li><li><a href="/jobs/www.sarkariresult.com.html">Sarkari Result&nbsp;2026</a></li><li><a href="/jobs/www.sarkariresult.com.html">SarkariResults</a></li><li><a href="/jobs/www.sarkariresult.com.html">Sarkari Result</a></li></ul>
-            <a href="#" class="view-all">View All Results →</a>
-        </section>
-
-        <!-- Admit Card Column -->
-        <section class="card-column">
-            <div class="card-header admit-header">
-                <h2>Admit Card</h2>
-            </div>
-            <ul class="job-list"><li><a href="/jobs/admitcard.html">Admit Card</a> <span class="badge blue">New</span></li><li><a href="/jobs/admitcard.html">Admit Card</a></li><li><a href="/jobs/sbi-po-june26.html">SBI Probationary Officers PO Pre Admit Card 2026</a></li><li><a href="/jobs/upsssc-aso-05-exam-2026.html">UPSSSC Assistant Statistical Officer ASO Admit Card 2026</a></li><li><a href="/jobs/ssc-dp-head-constable-min-2025.html">SSC Delhi Police Head Constable Ministerial PE&amp;MT/DV Test Admit Card 2026</a></li></ul>
-            <a href="#" class="view-all">View All Admit Cards →</a>
-        </section>
-
-        <!-- Latest Jobs Column -->
-        <section class="card-column">
-            <div class="card-header jobs-header">
-                <h2>Latest Jobs</h2>
-            </div>
-            <ul class="job-list">
-                <li><a href="/jobs/rrb-technician-2026.html">RRB Technician Recruitment 2026</a> <span class="badge green">Apply</span></li>
-                <li><a href="/jobs/upsssc-cane-supervisor-2026.html">UPSSSC Cane Supervisor 2026</a> <span class="badge blue">New</span></li>
-                <li><a href="/jobs/upsssc-otr-online-form-2026.html">UPSSSC OTR Online Form 2026</a></li>
-                <li><a href="/jobs/nicl-assistant-july26.html">NICL Assistant Online Form 2026</a></li>
-                <li><a href="/jobs/uttarakhand-utet-2026.html">UKTET Online Form 2026</a></li>
-            </ul>
-            <a href="latest-jobs.html" class="view-all">View All Latest Jobs →</a>
-    </section></main>
-
-    <!-- Additional Categories Section -->
-    <section class="main-container additional-categories">
-        <!-- Answer Key Column -->
-        <div class="card-column">
-            <div class="card-header" style="background: #f59e0b;">
-                <h2>Answer Key</h2>
-            </div>
-            <ul class="job-list">
-                <li><a href="#">CTET July 2026 Official Key</a> <span class="badge blue">New</span></li>
-                <li><a href="#">SSC CHSL Tier 1 Answer Key</a></li>
-                <li><a href="#">UPSC CSE Prelims Key</a></li>
-                <li><a href="#">UP B.Ed Entrance Exam Key</a></li>
-            </ul>
-            <a href="#" class="view-all">View All Answer Keys →</a>
         </div>
 
-        <!-- Syllabus Column -->
-        <div class="card-column">
-            <div class="card-header" style="background: #0ea5e9;">
-                <h2>Syllabus</h2>
+        <!-- Featured Hero Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            
+            <!-- Main Featured Article (Span 2 cols) -->
+            <a href="/jobs/rrb-technician-2026.html" class="hero-card lg:col-span-2 relative rounded-xl overflow-hidden group border border-bordercolor h-[400px] lg:h-[500px]">
+                <!-- Placeholder Image -->
+                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="RRB Train" class="hero-img absolute inset-0 w-full h-full object-cover">
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                <!-- Content -->
+                <div class="absolute bottom-0 left-0 p-6 lg:p-8 w-full">
+                    <span class="inline-block bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded mb-4">Railway Jobs</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-white leading-tight mb-3 group-hover:text-primary transition-colors">RRB Technician Recruitment 2026: Official Notification & Apply Online</h2>
+                    <p class="text-gray-300 text-sm lg:text-base line-clamp-2">Railway Recruitment Board has officially announced the massive recruitment drive for the post of Technician (Grade I and Grade III) for the year 2026.</p>
+                </div>
+            </a>
+
+            <!-- Stacked Sidebar Articles -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                <!-- Small Featured 1 -->
+                <a href="/jobs/upsssc-cane-supervisor-2026.html" class="hero-card relative rounded-xl overflow-hidden group border border-bordercolor h-[240px] lg:h-[238px]">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Agriculture" class="hero-img absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <span class="inline-block bg-green-600 text-white text-xs font-bold uppercase tracking-wider px-2 py-1 rounded mb-2">UPSSSC</span>
+                        <h3 class="text-xl font-bold text-white leading-tight group-hover:text-primary transition-colors">UPSSSC Cane Supervisor 2026 Application Begins</h3>
+                    </div>
+                </a>
+                
+                <!-- Small Featured 2 -->
+                <a href="/jobs/upsssc-otr-online-form-2026.html" class="hero-card relative rounded-xl overflow-hidden group border border-bordercolor h-[240px] lg:h-[238px]">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Forms" class="hero-img absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 w-full">
+                        <span class="inline-block bg-purple-600 text-white text-xs font-bold uppercase tracking-wider px-2 py-1 rounded mb-2">Important</span>
+                        <h3 class="text-xl font-bold text-white leading-tight group-hover:text-primary transition-colors">UPSSSC One Time Registration (OTR) Guide 2026</h3>
+                    </div>
+                </a>
             </div>
-            <ul class="job-list">
-                <li><a href="#">UP Police Constable Syllabus</a></li>
-                <li><a href="#">RRB NTPC New Pattern</a></li>
-                <li><a href="#">SSC MTS 2026 Syllabus</a></li>
-                <li><a href="#">BPSC TRE 4.0 Syllabus</a></li>
-            </ul>
-            <a href="#" class="view-all">View All Syllabus →</a>
         </div>
 
-        <!-- Important Column -->
-        <div class="card-column">
-            <div class="card-header" style="background: #64748b;">
-                <h2>Important</h2>
-            </div>
-            <ul class="job-list">
-                <li><a href="#">Download Aadhar Card</a></li>
-                <li><a href="#">Apply Online for PAN Card</a></li>
-                <li><a href="#">UP Scholarship Status 2026</a></li>
-                <li><a href="#">Voter ID Online Portal</a></li>
-            </ul>
-            <a href="#" class="view-all">View All Important →</a>
-        </div>
-        <!-- Admission Column -->
-        <div class="card-column">
-            <div class="card-header" style="background: #8b5cf6;">
-                <h2>Admission</h2>
-            </div>
-            <ul class="job-list">
-                <li><a href="#">IGNOU July 2026 Admission</a></li>
-                <li><a href="#">Delhi University UG Admission</a> <span class="badge blue">New</span></li>
-                <li><a href="#">BHU Entrance Exam 2026</a></li>
-                <li><a href="#">UP ITI Online Form</a></li>
-            </ul>
-            <a href="#" class="view-all">View All Admissions →</a>
-        </div>
+        <!-- Main Content Area -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Primary Feed (8 cols) -->
+            <div class="lg:col-span-8">
+                <div class="flex items-center justify-between border-b border-bordercolor pb-3 mb-6">
+                    <h2 class="text-2xl font-bold text-white relative">
+                        Latest Articles
+                        <span class="absolute -bottom-3.5 left-0 w-12 h-1 bg-primary rounded-t-md"></span>
+                    </h2>
+                    <a href="latest-jobs.html" class="text-sm font-semibold text-primary hover:text-white uppercase tracking-wider">View All</a>
+                </div>
 
-        <!-- Certificate Column -->
-        <div class="card-column">
-            <div class="card-header" style="background: #14b8a6;">
-                <h2>Certificate Verification</h2>
+                <!-- Feed Items -->
+                <div class="space-y-6">
+                    <!-- Article 1 -->
+                    <article class="flex flex-col md:flex-row gap-6 bg-cardbg border border-bordercolor rounded-xl p-4 hover:border-primary transition-colors group">
+                        <div class="w-full md:w-1/3 aspect-[4/3] rounded-lg overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bank" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Banking</span>
+                                <span class="text-gray-500 text-xs">• 2 hours ago</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                <a href="/jobs/nicl-assistant-july26.html">NICL Assistant Recruitment 2026: Eligibility & Syllabus Detailed</a>
+                            </h3>
+                            <p class="text-gray-400 text-sm line-clamp-3">National Insurance Company Limited has opened the application window for Assistant positions. Find out the exam pattern and requirements.</p>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="flex flex-col md:flex-row gap-6 bg-cardbg border border-bordercolor rounded-xl p-4 hover:border-primary transition-colors group">
+                        <div class="w-full md:w-1/3 aspect-[4/3] rounded-lg overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="College" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="text-xs font-bold text-yellow-500 uppercase tracking-wider">Entrance Exam</span>
+                                <span class="text-gray-500 text-xs">• 5 hours ago</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                <a href="/jobs/gate-2027.html">IIT GATE 2027 Online Form and New Syllabus Additions</a>
+                            </h3>
+                            <p class="text-gray-400 text-sm line-clamp-3">The Graduate Aptitude Test in Engineering has introduced several new changes for 2027. Read our full breakdown.</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 3 -->
+                    <article class="flex flex-col md:flex-row gap-6 bg-cardbg border border-bordercolor rounded-xl p-4 hover:border-primary transition-colors group">
+                        <div class="w-full md:w-1/3 aspect-[4/3] rounded-lg overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Teaching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="text-xs font-bold text-orange-500 uppercase tracking-wider">Teaching Jobs</span>
+                                <span class="text-gray-500 text-xs">• 1 day ago</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                <a href="/jobs/uttarakhand-utet-2026.html">Uttarakhand TET 2026 Application Process Now Live</a>
+                            </h3>
+                            <p class="text-gray-400 text-sm line-clamp-3">The state has announced the UTET Paper 1 and 2 exams. Prepare yourself with the latest official syllabus and PYQs.</p>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="latest-jobs.html" class="inline-block border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary hover:text-white transition-colors">
+                        Load More Articles
+                    </a>
+                </div>
             </div>
-            <ul class="job-list">
-                <li><a href="#">UP Board Result Verification</a></li>
-                <li><a href="#">Download E-Aadhar Card</a></li>
-                <li><a href="#">PAN Card Status Tracking</a></li>
-                <li><a href="#">Driving License Details</a></li>
-            </ul>
-            <a href="#" class="view-all">View All Certificates →</a>
-        </div>
 
-        <!-- Scholarship Column -->
-        <div class="card-column">
-            <div class="card-header" style="background: #eab308;">
-                <h2>Scholarship</h2>
+            <!-- Right Sidebar (4 cols) -->
+            <aside class="lg:col-span-4 space-y-8">
+                
+                <!-- Results Widget -->
+                <div class="bg-cardbg border border-bordercolor rounded-xl p-6">
+                    <div class="flex items-center justify-between border-b border-bordercolor pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-white">Latest Results</h3>
+                        <span class="text-xs font-bold text-purple-500 uppercase">Updates</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="border-b border-gray-700/50 pb-3 last:border-0 last:pb-0">
+                            <a href="#" class="block hover:text-primary transition-colors">
+                                <span class="text-white font-medium">UPSC CSE Prelims 2026 Result</span>
+                                <span class="block text-gray-500 text-xs mt-1">Declared Today</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-700/50 pb-3 last:border-0 last:pb-0">
+                            <a href="#" class="block hover:text-primary transition-colors">
+                                <span class="text-white font-medium">UP Police Constable Final Merit</span>
+                                <span class="block text-gray-500 text-xs mt-1">Declared Yesterday</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-700/50 pb-3 last:border-0 last:pb-0">
+                            <a href="#" class="block hover:text-primary transition-colors">
+                                <span class="text-white font-medium">SSC CHSL Tier 1 Result</span>
+                                <span class="block text-gray-500 text-xs mt-1">Declared 2 days ago</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Admit Card Widget -->
+                <div class="bg-cardbg border border-bordercolor rounded-xl p-6 sticky top-24">
+                    <div class="flex items-center justify-between border-b border-bordercolor pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-white">Admit Cards</h3>
+                        <span class="text-xs font-bold text-pink-500 uppercase">Download</span>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="border-b border-gray-700/50 pb-3 last:border-0 last:pb-0">
+                            <a href="#" class="block hover:text-primary transition-colors">
+                                <span class="text-white font-medium">SBI PO Pre Exam Admit Card</span>
+                                <span class="block text-xs text-red-400 font-bold mt-1">Exam Next Week</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-700/50 pb-3 last:border-0 last:pb-0">
+                            <a href="#" class="block hover:text-primary transition-colors">
+                                <span class="text-white font-medium">RRB NTPC CBT-1 Call Letter</span>
+                                <span class="block text-gray-500 text-xs mt-1">Link Active</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-700/50 pb-3 last:border-0 last:pb-0">
+                            <a href="#" class="block hover:text-primary transition-colors">
+                                <span class="text-white font-medium">CTET July 2026 Hall Ticket</span>
+                                <span class="block text-gray-500 text-xs mt-1">Link Active</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+    <!-- SEO Footer Content (GTABoom style) -->
+    <div class="bg-cardbg border-t border-bordercolor py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-white mb-4">About SarkariJobs.blog</h2>
+            <p class="text-gray-400 text-sm leading-relaxed max-w-4xl">
+                Welcome to SarkariJobs.blog, your ultimate destination for all Sarkari Naukri updates, Results, Admit Cards, and Online Forms. We are an independent educational news portal dedicated to providing accurate, lightning-fast notifications for UPSC, SSC, Banking, Railways, and Defense sectors. Our team curates high-quality guides and resources to help aspirants achieve their career goals.
+            </p>
+            <p class="text-gray-500 text-xs mt-4">
+                Disclaimer: We are not affiliated with the Government of India or any State Government. All information provided here is strictly for educational purposes.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="bg-darkbg py-8 border-t border-bordercolor">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-extrabold text-white tracking-tight mb-4 md:mb-0">
+                SarkariJobs<span class="text-primary">.</span>blog
             </div>
-            <ul class="job-list">
-                <li><a href="#">UP Scholarship Status 2026</a> <span class="badge red">Hot</span></li>
-                <li><a href="#">Bihar Post Matric Scholarship</a></li>
-                <li><a href="#">NSP Online Form 2026</a></li>
-                <li><a href="#">MP Ashirwad Scholarship</a></li>
-            </ul>
-            <a href="#" class="view-all">View All Scholarships →</a>
-        </div>
-    </section>
-
-    <!-- State Wise Jobs -->
-    <section class="state-wise-section">
-        <h2>Find Jobs by State</h2>
-        <div class="state-grid">
-            <a href="#" class="state-btn">Andhra Pradesh</a>
-            <a href="#" class="state-btn">Arunachal Pradesh</a>
-            <a href="#" class="state-btn">Assam</a>
-            <a href="#" class="state-btn">Bihar</a>
-            <a href="#" class="state-btn">Chhattisgarh</a>
-            <a href="#" class="state-btn">Delhi</a>
-            <a href="#" class="state-btn">Goa</a>
-            <a href="#" class="state-btn">Gujarat</a>
-            <a href="#" class="state-btn">Haryana</a>
-            <a href="#" class="state-btn">Himachal Pradesh</a>
-            <a href="#" class="state-btn">Jharkhand</a>
-            <a href="#" class="state-btn">Karnataka</a>
-            <a href="#" class="state-btn">Kerala</a>
-            <a href="#" class="state-btn">Madhya Pradesh</a>
-            <a href="#" class="state-btn">Maharashtra</a>
-            <a href="#" class="state-btn">Manipur</a>
-            <a href="#" class="state-btn">Meghalaya</a>
-            <a href="#" class="state-btn">Mizoram</a>
-            <a href="#" class="state-btn">Nagaland</a>
-            <a href="#" class="state-btn">Odisha</a>
-            <a href="#" class="state-btn">Punjab</a>
-            <a href="#" class="state-btn">Rajasthan</a>
-            <a href="#" class="state-btn">Sikkim</a>
-            <a href="#" class="state-btn">Tamil Nadu</a>
-            <a href="#" class="state-btn">Telangana</a>
-            <a href="#" class="state-btn">Tripura</a>
-            <a href="#" class="state-btn">Uttar Pradesh (UP)</a>
-            <a href="#" class="state-btn">Uttarakhand</a>
-            <a href="#" class="state-btn">West Bengal</a>
-        </div>
-    </section>
-
-    <!-- SEO Content Section -->
-    <section class="seo-section">
-        <div class="seo-content">
-            <h2>SarkariJobs.blog - No.1 Portal for Sarkari Result &amp; Latest Govt Jobs 2026</h2>
-            <p>Welcome to <strong>SarkariJobs.blog</strong>, your trusted and lightning-fast portal for everything related to Sarkari Naukri, Sarkari Result, Admit Cards, and Online Forms. Every single day, thousands of new government job vacancies are released by SSC, UPSC, Railway (RRB), Banking (IBPS, SBI), Defense (Army, Navy, Airforce), and various state governments including UP, Bihar, MP, and Delhi. Our dedicated team updates these notifications in real-time so that you never miss an opportunity to secure your dream job.</p>
-            <p>Whether you are looking for the latest <strong>SSC CGL notification</strong>, downloading the <strong>RRB NTPC Admit Card</strong>, checking your <strong>UPSC CSE Prelims Result</strong>, or searching for 10th pass and 12th pass Sarkari Jobs, we have everything organized in easy-to-navigate sections. We also provide direct download links for Official Syllabus, Previous Year Question Papers (PYQ), Answer Keys, and Admission forms for top universities.</p>
-            <p><strong>Disclaimer:</strong> SarkariJobs.blog is an independent educational news portal. We are not affiliated with the Government of India or any State Government. All information provided here is strictly for educational and informational purposes, gathered from official websites and employment newspapers. Please always verify details on the official organization's website before applying.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms &amp; Conditions</a>
-                <a href="#">Disclaimer</a>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms</a>
             </div>
-            <p>© 2026 SarkariJobs.blog - All rights reserved.</p>
-            <p class="disclaimer">Disclaimer: This is an educational portal. We are not associated with any government organization.</p>
+            <div class="text-gray-500 text-sm mt-4 md:mt-0">
+                &copy; 2026 SarkariJobs.blog
+            </div>
         </div>
     </footer>
 
-
-</body></html>
+</body>
+</html>

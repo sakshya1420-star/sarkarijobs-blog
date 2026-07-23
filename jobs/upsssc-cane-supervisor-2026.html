@@ -1,29 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPSSSC Cane Supervisor 2026 - Eligibility, Dates, Syllabus & Apply</title>
-    <meta name="description" content="UPSSSC Cane Supervisor Recruitment 2026: Official Notification released. Check eligibility, age limit, syllabus, exam pattern, and step-by-step guide to apply online.">
+    <title>Sarkari Jobs Blog | Latest Govt Jobs & Results</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // blue-500
+                        secondary: '#ef4444', // red-500
+                        darkbg: '#0f172a', // slate-900
+                        cardbg: '#1e293b', // slate-800
+                        bordercolor: '#334155' // slate-700
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Existing style.css for fallback or custom tweaks -->
     <link rel="stylesheet" href="../style.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-img {
+            transition: transform 0.5s ease;
+        }
+        .hero-card:hover .hero-img {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo">
-                <span class="logo-text">SarkariJobs<span class="dot">.</span>blog</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/latest-jobs.html">Latest Jobs</a></li>
-                <li><a href="#">Admit Card</a></li>
-                <li><a href="#">Results</a></li>
-                <li><a href="#">Syllabus</a></li>
-            </ul>
+<body class="bg-darkbg text-gray-200 antialiased">
+
+    <!-- Sticky Glassmorphism Header -->
+    <header class="glass-header sticky top-0 z-50 border-b border-bordercolor transition-transform duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="/" class="text-2xl font-extrabold text-white tracking-tight">
+                        SarkariJobs<span class="text-primary">.</span>blog
+                    </a>
+                </div>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/" class="text-white font-semibold hover:text-primary transition-colors px-3 py-2 text-sm uppercase tracking-wider border-b-2 border-primary">News</a>
+                    <a href="/latest-jobs.html" class="text-gray-300 hover:text-white transition-colors px-3 py-2 text-sm uppercase tracking-wider">Latest Jobs</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors px-3 py-2 text-sm uppercase tracking-wider">Admit Card</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors px-3 py-2 text-sm uppercase tracking-wider">Results</a>
+                </nav>
+                <!-- Search & Actions -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-300 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <main class="blog-container">
         
@@ -141,18 +198,36 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms &amp; Conditions</a>
-                <a href="#">Disclaimer</a>
+    <!-- SEO Footer Content (GTABoom style) -->
+    <div class="bg-cardbg border-t border-bordercolor py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-white mb-4">About SarkariJobs.blog</h2>
+            <p class="text-gray-400 text-sm leading-relaxed max-w-4xl">
+                Welcome to SarkariJobs.blog, your ultimate destination for all Sarkari Naukri updates, Results, Admit Cards, and Online Forms. We are an independent educational news portal dedicated to providing accurate, lightning-fast notifications for UPSC, SSC, Banking, Railways, and Defense sectors. Our team curates high-quality guides and resources to help aspirants achieve their career goals.
+            </p>
+            <p class="text-gray-500 text-xs mt-4">
+                Disclaimer: We are not affiliated with the Government of India or any State Government. All information provided here is strictly for educational purposes.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="bg-darkbg py-8 border-t border-bordercolor">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-extrabold text-white tracking-tight mb-4 md:mb-0">
+                SarkariJobs<span class="text-primary">.</span>blog
             </div>
-            <p>© 2026 SarkariJobs.blog - All rights reserved.</p>
-            <p class="disclaimer">Disclaimer: This is an educational portal. We are not associated with any government organization.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms</a>
+            </div>
+            <div class="text-gray-500 text-sm mt-4 md:mt-0">
+                &copy; 2026 SarkariJobs.blog
+            </div>
         </div>
     </footer>
+
 </body>
 </html>

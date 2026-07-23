@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Jobs | SarkariJobs.blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9));
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .blog-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 2rem; 
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .blog-card {
+            display: block; 
+            border: 1px solid var(--border); 
+            border-radius: 12px; 
+            padding: 2rem; 
+            text-decoration: none; 
+            color: var(--text-main); 
+            transition: all 0.3s ease; 
+            background: var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .blog-card h3 {
+            color: var(--primary); 
+            margin-bottom: 0.75rem; 
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            font-size: 0.95rem; 
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            display: inline-block; 
+            color: var(--c-job); 
+            font-weight: 600; 
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">SarkariJobs<span class="dot">.</span>blog</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="latest-jobs.html" class="active">Latest Jobs</a></li>
+                <li><a href="#">Admit Card</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Syllabus</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Latest Government Jobs</h1>
+        <p>Explore all the newest recruitment drives and application forms.</p>
+    </header>
+
+    <main class="blog-grid">
+        <a href="/jobs/rrb-technician-2026.html" class="blog-card">
+            <h3>RRB Technician 2026 Notification Released</h3>
+            <p>Railway Recruitment Board has announced 62+ Vacancies. Read the complete guide, online application procedure, syllabus, & exam pattern.</p>
+            <span class="read-more">Read Full Blog →</span>
+        </a>
+        <a href="/jobs/upsssc-cane-supervisor-2026.html" class="blog-card">
+            <h3>UPSSSC Cane Supervisor Application 2026</h3>
+            <p>Detailed breakdown of Eligibility Criteria, Important Dates, Mains Syllabus & Apply Online Form instructions for UPSSSC.</p>
+            <span class="read-more">Read Full Blog →</span>
+        </a>
+        <a href="/jobs/upsssc-otr-online-form-2026.html" class="blog-card">
+            <h3>UPSSSC One Time Registration (OTR) 2026</h3>
+            <p>Mandatory OTR registration process for all future UPSSSC exams. Step-by-step application and document requirements.</p>
+            <span class="read-more">Read Full Blog →</span>
+        </a>
+        <a href="/jobs/nicl-assistant-july26.html" class="blog-card">
+            <h3>NICL Assistant Online Form 2026</h3>
+            <p>National Insurance Company Limited Recruitment. Check eligibility, age limit, and selection process.</p>
+            <span class="read-more">Read Full Blog →</span>
+        </a>
+        <a href="/jobs/gate-2027.html" class="blog-card">
+            <h3>IIT GATE 2027 Registration Portal</h3>
+            <p>Graduate Aptitude Test in Engineering (GATE) details, branches, eligibility, and new changes for 2027.</p>
+            <span class="read-more">Read Full Blog →</span>
+        </a>
+        <a href="/jobs/uttarakhand-utet-2026.html" class="blog-card">
+            <h3>Uttarakhand TET Online Form 2026</h3>
+            <p>UTET Paper 1 and Paper 2 complete notification, exam dates, syllabus, and application fee details.</p>
+            <span class="read-more">Read Full Blog →</span>
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Disclaimer</a>
+            </div>
+            <p>© 2026 SarkariJobs.blog - All rights reserved.</p>
+            <p class="disclaimer">Disclaimer: This is an educational portal. We are not associated with any government organization.</p>
+        </div>
+    </footer>
+</body>
+</html>
